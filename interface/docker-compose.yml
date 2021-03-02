@@ -1,7 +1,7 @@
 version: '3'
 services:
   http1:
-    image: "winnovature/unitia:20jan2021" 
+    image: "winnovature/unitia:24jan2021" 
     ports:
       - "8001:8080"
     volumes:
@@ -12,7 +12,7 @@ services:
       - module=http
       - TZ=Asia/Kolkata  
   http2:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     ports:
       - "8002:8080"
     volumes:
@@ -23,7 +23,7 @@ services:
       - module=http
       - TZ=Asia/Kolkata
   smpp:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     ports:
       - "2775:8080"
     volumes:

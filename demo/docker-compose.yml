@@ -1,0 +1,13 @@
+version: '3'
+services:
+  demo:
+    image: "winnovature/unitia:24jan2021" 
+    ports:
+      - "8081:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs 
+    environment:
+      - module=demo
+      - TZ=Asia/Kolkata  

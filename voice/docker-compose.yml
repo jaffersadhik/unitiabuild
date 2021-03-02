@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    image: mysql:5
+    environment:
+      - MYSQL_PASSWORD=pass
+      - MYSQL_USER=asterisk
+      - MYSQL_DATABASE=freepbx
+
+  asterisk:
+    image: asterisk
+    links:
+     - db
+  freepbx:
+    image: php5-apache
+    links:
+      - db

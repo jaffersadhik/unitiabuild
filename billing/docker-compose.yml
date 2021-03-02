@@ -1,7 +1,7 @@
 version: '3'
 services:
   dnreceiver1:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     ports:
       - "6001:8080"
     volumes:
@@ -14,7 +14,7 @@ services:
       - module=dnreceiver
       - TZ=Asia/Kolkata
   dnreceiver2:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     ports:
       - "6002:8080"
     volumes:
@@ -27,7 +27,7 @@ services:
       - module=dnreceiver
       - TZ=Asia/Kolkata
   submission:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -36,7 +36,7 @@ services:
       - module=submission
       - TZ=Asia/Kolkata
   delivery:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -47,7 +47,7 @@ services:
       - module=delivery
       - TZ=Asia/Kolkata
   scheduledb:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -58,7 +58,7 @@ services:
       - module=scheduledb
       - TZ=Asia/Kolkata
   dnpostdb:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -69,7 +69,7 @@ services:
       - module=dnpostdb
       - TZ=Asia/Kolkata
   dbtoredis:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -80,7 +80,7 @@ services:
       - module=dbtoredis
       - TZ=Asia/Kolkata
   tablereader:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -91,7 +91,7 @@ services:
       - module=tablereader
       - TZ=Asia/Kolkata
   dnhttppost:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -107,7 +107,7 @@ services:
       - "dnreceiver1"
       - "dnreceiver2"
   queuecheck:
-    image: "winnovature/unitia:20jan2021"
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia

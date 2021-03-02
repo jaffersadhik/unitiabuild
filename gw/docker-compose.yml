@@ -9,18 +9,19 @@ services:
     environment:
       - module=simulator
       - TZ=Asia/Kolkata
-  kannel1:
-    image: "winnovature/kannel:sqldn"
+  gw1:
+    image: "gw"
     ports:
-      - "13013:13013" # smsbox
-      - "13000:13000" # kannel admin
+      - "13113:13013" # smsbox
+      - "13100:13000" # kannel admin
+      - "13101:13001" 
     depends_on:
       - kannelconfig
     volumes:
-      - "/home/unitia/production/spool/kannel1:/var/spool/kannel"
-      - "/logs/kannel1:/var/log/kannel"
+      - "/home/unitia/production/spool/gw1:/var/spool/kannel"
+      - "/logs/gw1:/var/log/kannel"
       - "/etc/hosts:/etc/hosts"
-      - "/home/unitia/production/kannel1:/etc/kannel"
+      - "/home/unitia/production/gw1:/etc/kannel"
       - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
     environment:
       - "LANG=en_US.UTF-8"
