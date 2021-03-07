@@ -1,64 +1,49 @@
 version: '3'
 services:
-  http1:
-    image: "winnovature/unitia:24jan2021" 
+  dnreceiver1:
+    image: "winnovature/unitia:24jan2021"
     ports:
-      - "8001:8080"
+      - "6001:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnreceiver
+      - TZ=Asia/Kolkata
+  dnreceiver2:
+    image: "winnovature/unitia:24jan2021"
+    ports:
+      - "6002:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnreceiver
+      - TZ=Asia/Kolkata
+  dnhttppost:
+    image: "winnovature/unitia:24jan2021"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs 
     environment:
-      - module=http
-      - TZ=Asia/Kolkata  
-  http2:
-    image: "winnovature/unitia:24jan2021"
-    ports:
-      - "8002:8080"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=http
+      - module=dnhttppost
       - TZ=Asia/Kolkata
-  http3:
-    image: "winnovature/unitia:24jan2021"
+  dn:
+    image: "dn-haproxy:latest"
     ports:
-      - "8003:8080"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=http
-      - TZ=Asia/Kolkata
-  http4:
-    image: "winnovature/unitia:24jan2021"
-    ports:
-      - "8004:8080"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=http
-      - TZ=Asia/Kolkata
-  smpp:
-    image: "winnovature/unitia:24jan2021"
-    ports:
-      - "2775:8080"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=smpp
-      - TZ=Asia/Kolkata
-  http:
-    image: "http-haproxy:latest"
-    ports:
-      - "9090:8080"
+      - "8777:8080"
     depends_on:
-      - "http1"
-      - "http2"
+      - "dnreceiver1"
+      - "dnreceiver2"
+  queuecheck:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=queuecheck
+      - TZ=Asia/Kolkata

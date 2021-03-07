@@ -1,6 +1,6 @@
 version: '3'
 services:
-  cdacconnector2:
+  cdacconnector:
     image: "winnovature/unitia:24jan2021"
     volumes:
       - /logs:/logs

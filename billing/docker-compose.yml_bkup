@@ -1,5 +1,31 @@
 version: '3'
 services:
+  dnreceiver1:
+    image: "winnovature/unitia:24jan2021"
+    ports:
+      - "6001:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    depends_on:
+      - "submission"
+    environment:
+      - module=dnreceiver
+      - TZ=Asia/Kolkata
+  dnreceiver2:
+    image: "winnovature/unitia:24jan2021"
+    ports:
+      - "6002:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    depends_on:
+      - "submission"
+    environment:
+      - module=dnreceiver
+      - TZ=Asia/Kolkata
   submission:
     image: "winnovature/unitia:24jan2021"
     volumes:
@@ -59,6 +85,33 @@ services:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
+    depends_on:
+      - "dnhttppost"
     environment:
       - module=tablereader
+      - TZ=Asia/Kolkata
+  dnhttppost:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs 
+    environment:
+      - module=dnhttppost
+      - TZ=Asia/Kolkata
+  dn:
+    image: "dn-haproxy:latest"
+    ports:
+      - "8777:8080"
+    depends_on:
+      - "dnreceiver1"
+      - "dnreceiver2"
+  queuecheck:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=queuecheck
       - TZ=Asia/Kolkata

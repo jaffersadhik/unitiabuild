@@ -59,6 +59,8 @@ services:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
+    depends_on:
+      - "dnhttppost"
     environment:
       - module=tablereader
       - TZ=Asia/Kolkata
