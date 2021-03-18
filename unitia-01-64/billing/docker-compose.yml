@@ -1,0 +1,64 @@
+version: '3'
+services:
+  submission:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=submission
+      - TZ=Asia/Kolkata
+  delivery:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    depends_on:
+      - "scheduledb"
+    environment:
+      - module=delivery
+      - TZ=Asia/Kolkata
+  scheduledb:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    depends_on:
+      - "dnpostdb" 
+    environment:
+      - module=scheduledb
+      - TZ=Asia/Kolkata
+  dnpostdb:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    depends_on:
+      - "dbtoredis"
+    environment:
+      - module=dnpostdb
+      - TZ=Asia/Kolkata
+  dbtoredis:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    depends_on:
+      - "tablereader"
+    environment:
+      - module=dbtoredis
+      - TZ=Asia/Kolkata
+  tablereader:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=tablereader
+      - TZ=Asia/Kolkata

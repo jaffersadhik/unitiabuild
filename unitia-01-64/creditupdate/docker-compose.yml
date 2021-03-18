@@ -1,0 +1,12 @@
+version: '3'
+services:
+  creditupdate:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=creditupdate
+      - redis=rq2
+      - TZ=Asia/Kolkata

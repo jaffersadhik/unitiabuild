@@ -1,0 +1,38 @@
+version: '3'
+services:
+  redisqueue1:
+    image: "redis:6.0-alpine3.12"
+    ports:
+      - "6379:6379" 
+    volumes:
+      - /home/unitia/production/redisqueue1/data/:/data
+  rq2:
+    image: "redis:6.0-alpine3.12"
+    ports:
+      - "6380:6379"
+    volumes:
+      - /home/unitia/production/rq2/data/:/data
+  rq3:
+    image: "redis:6.0-alpine3.12"
+    ports:
+      - "6381:6379"
+    volumes:
+      - /home/unitia/production/rq3/data/:/data
+  rq4:
+    image: "redis:6.0-alpine3.12"
+    ports:
+      - "6382:6379"
+    volumes:
+      - /home/unitia/production/rq4/data/:/data
+  rq5:
+    image: "redis:6.0-alpine3.12"
+    ports:
+      - "6383:6379"
+    volumes:
+      - /home/unitia/production/rq5/data/:/data
+  rq6:
+    image: "redis:6.0-alpine3.12"
+    ports:
+      - "6384:6379"
+    volumes:
+      - /home/unitia/production/rq6/data/:/data
