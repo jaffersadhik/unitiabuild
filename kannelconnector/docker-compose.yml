@@ -8,7 +8,7 @@ services:
       - /logs:/logs
     environment:
       - module=dnsql
-      - kannelid=kannel1
+      - kannelid=kannel2
       - TZ=Asia/Kolkata
   kannelconnector2:
     image: "winnovature/unitia:24jan2021"
@@ -20,4 +20,14 @@ services:
       - module=kannelconnector
       - redis=rq2
       - TZ=Asia/Kolkata
-      - kannelid=kannel1
+      - kannelid=kannel2
+  queuecheck:
+    image: "winnovature/unitia:24jan2021"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=queuecheck
+      - TZ=Asia/Kolkata
+

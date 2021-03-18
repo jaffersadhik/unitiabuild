@@ -38,12 +38,3 @@ services:
     depends_on:
       - "dnreceiver1"
       - "dnreceiver2"
-  queuecheck:
-    image: "winnovature/unitia:24jan2021"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=queuecheck
-      - TZ=Asia/Kolkata
