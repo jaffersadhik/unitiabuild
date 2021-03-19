@@ -1,0 +1,29 @@
+version: '3'
+services:
+  optin:
+    image: "winnovature/unitia:18mar2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=optin
+      - TZ=Asia/Kolkata
+  optout:
+    image: "winnovature/unitia:18mar2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=optout
+      - TZ=Asia/Kolkata
+  duplicate:
+    image: "winnovature/unitia:18mar2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=duplicate
+      - TZ=Asia/Kolkata

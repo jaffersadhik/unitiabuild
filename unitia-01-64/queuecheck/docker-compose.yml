@@ -1,12 +1,12 @@
 version: '3'
 services:
-  router2:
-    image: "winnovature/unitia:18mar2021"
+  queuecheck:
+    image: "winnovature/unitia:24jan2021"
     volumes:
-      - /logs:/logs
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
+      - /logs:/logs
     environment:
-      - module=router
-      - redis=rq2
+      - module=queuecheck
       - TZ=Asia/Kolkata
+

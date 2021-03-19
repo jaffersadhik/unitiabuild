@@ -21,13 +21,4 @@ services:
       - redis=rq2
       - TZ=Asia/Kolkata
       - kannelid=kannel2
-  queuecheck:
-    image: "winnovature/unitia:24jan2021"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=queuecheck
-      - TZ=Asia/Kolkata
 
