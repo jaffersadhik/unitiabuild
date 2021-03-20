@@ -1,24 +1,24 @@
 version: '3'
 services:
-  router1:
-    image: "winnovature/unitia:20mar2021_1"
+  http1:
+    image: "winnovature/unitia:20mar2021_1" 
+    ports:
+      - "8001:8080"
     volumes:
-      - /logs:/logs
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
+      - /logs:/logs 
     environment:
-      - module=router
-      - redis=rq2
-      - priority=1
-      - TZ=Asia/Kolkata
-  router2:
+      - module=http
+      - TZ=Asia/Kolkata  
+  http2:
     image: "winnovature/unitia:20mar2021_1"
+    ports:
+      - "8002:8080"
     volumes:
-      - /logs:/logs
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
+      - /logs:/logs
     environment:
-      - module=router
-      - redis=rq2
-      - priority=2
+      - module=http
       - TZ=Asia/Kolkata

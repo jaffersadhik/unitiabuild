@@ -1,29 +1,24 @@
 version: '3'
 services:
-  optin:
+  http3:
     image: "winnovature/unitia:20mar2021_1"
+    ports:
+      - "8003:8080"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
     environment:
-      - module=optin
+      - module=http
       - TZ=Asia/Kolkata
-  optout:
+  http4:
     image: "winnovature/unitia:20mar2021_1"
+    ports:
+      - "8004:8080"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
     environment:
-      - module=optout
-      - TZ=Asia/Kolkata
-  duplicate:
-    image: "winnovature/unitia:20mar2021_1"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=duplicate
+      - module=http
       - TZ=Asia/Kolkata

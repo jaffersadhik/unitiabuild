@@ -1,12 +1,13 @@
 version: '3'
 services:
-  queuecheck:
+  smpp:
     image: "winnovature/unitia:20mar2021_1"
+    ports:
+      - "2775:8080"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
     environment:
-      - module=queuecheck
+      - module=smpp
       - TZ=Asia/Kolkata
-
