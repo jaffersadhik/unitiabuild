@@ -1,7 +1,7 @@
 version: '3'
 services:
   dnreceiver1:
-    image: "winnovature/unitia:24jan2021"
+    image: "winnovature/unitia:21mar2021_1"
     ports:
       - "6001:8080"
     volumes:
@@ -12,7 +12,7 @@ services:
       - module=dnreceiver
       - TZ=Asia/Kolkata
   dnreceiver2:
-    image: "winnovature/unitia:24jan2021"
+    image: "winnovature/unitia:21mar2021_1"
     ports:
       - "6002:8080"
     volumes:
@@ -23,7 +23,7 @@ services:
       - module=dnreceiver
       - TZ=Asia/Kolkata
   dnhttppost:
-    image: "winnovature/unitia:24jan2021"
+    image: "winnovature/unitia:21mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia

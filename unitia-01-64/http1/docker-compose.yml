@@ -1,7 +1,7 @@
 version: '3'
 services:
   http1:
-    image: "winnovature/unitia:20mar2021_1" 
+    image: "winnovature/unitia:23mar2021_1" 
     ports:
       - "8001:8080"
     volumes:
@@ -10,9 +10,10 @@ services:
       - /logs:/logs 
     environment:
       - module=http
+      - port=8001
       - TZ=Asia/Kolkata  
   http2:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:23mar2021_1"
     ports:
       - "8002:8080"
     volumes:
@@ -21,4 +22,5 @@ services:
       - /logs:/logs
     environment:
       - module=http
+      - port=8002
       - TZ=Asia/Kolkata
