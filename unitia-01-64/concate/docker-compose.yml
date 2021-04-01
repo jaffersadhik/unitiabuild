@@ -1,12 +1,12 @@
 version: '3'
 services:
-  queuecheck:
+  concateinsert:
     image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
     environment:
-      - module=queuecheck
+      - module=concateinsert
+      - redis=rq2      
       - TZ=Asia/Kolkata
-

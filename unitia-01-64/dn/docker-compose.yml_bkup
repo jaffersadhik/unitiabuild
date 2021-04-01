@@ -22,6 +22,15 @@ services:
     environment:
       - module=dnreceiver
       - TZ=Asia/Kolkata
+  dnhttppost:
+    image: "winnovature/unitia:21mar2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs 
+    environment:
+      - module=dnhttppost
+      - TZ=Asia/Kolkata
   dn:
     image: "dn-haproxy:latest"
     ports:

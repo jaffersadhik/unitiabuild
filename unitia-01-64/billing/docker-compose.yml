@@ -1,7 +1,7 @@
 version: '3'
 services:
   submission:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -10,7 +10,7 @@ services:
       - module=submission
       - TZ=Asia/Kolkata
   delivery:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -21,7 +21,7 @@ services:
       - module=delivery
       - TZ=Asia/Kolkata
   scheduledb:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -32,7 +32,7 @@ services:
       - module=scheduledb
       - TZ=Asia/Kolkata
   dnpostdb:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -43,7 +43,7 @@ services:
       - module=dnpostdb
       - TZ=Asia/Kolkata
   dbtoredis:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -54,7 +54,7 @@ services:
       - module=dbtoredis
       - TZ=Asia/Kolkata
   tablereader:
-    image: "winnovature/unitia:20mar2021_1"
+    image: "winnovature/unitia:31mar2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia

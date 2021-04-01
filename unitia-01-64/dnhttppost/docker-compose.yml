@@ -1,26 +1,22 @@
 version: '3'
 services:
-  http1:
-    image: "winnovature/unitia:31mar2021_1" 
-    ports:
-      - "8001:8080"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs 
-    environment:
-      - module=http
-      - port=8001
-      - TZ=Asia/Kolkata  
-  http2:
+  dnhttppostinsert:
     image: "winnovature/unitia:31mar2021_1"
-    ports:
-      - "8002:8080"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
     environment:
-      - module=http
-      - port=8002
+      - module=dnhttppostinsert
+      - redis=rq2      
       - TZ=Asia/Kolkata
+  dnhttppostselect:
+    image: "winnovature/unitia:31mar2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnhttppostselect
+      - TZ=Asia/Kolkata
+
