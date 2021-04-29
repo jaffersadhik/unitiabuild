@@ -1,17 +1,7 @@
 version: '3'
 services:
-  dnsql:
-    image: "winnovature/unitia:22mar2021_1"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=dnsql
-      - kannelid=kannel2
-      - TZ=Asia/Kolkata
   kannelconnector1:
-    image: "winnovature/unitia:22mar2021_1"
+    image: "winnovature/unitia:23apr2021_1"
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts
@@ -23,7 +13,7 @@ services:
       - TZ=Asia/Kolkata
       - kannelid=kannel2
   kannelconnector2:
-    image: "winnovature/unitia:22mar2021_1"
+    image: "winnovature/unitia:23apr2021_1"
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts

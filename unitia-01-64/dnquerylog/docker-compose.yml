@@ -1,13 +1,11 @@
 version: '3'
 services:
-  cdacconnector:
+  dnquerylog:
     image: "winnovature/unitia:31mar2021_1"
     volumes:
-      - /logs:/logs
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
+      - /logs:/logs
     environment:
-      - module=cdacconnector
-      - redis=rq2
+      - module=dnquerylog
       - TZ=Asia/Kolkata
-      - kannelid=cdac
