@@ -24,4 +24,28 @@ services:
       - priority=2
       - TZ=Asia/Kolkata
       - kannelid=kannel2
+  kannelconnector3:
+    image: "winnovature/unitia:23apr2021_1"
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=kannelconnector
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+      - kannelid=vedioconkannel
+  kannelconnector4:
+    image: "winnovature/unitia:23apr2021_1"
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=kannelconnector
+      - redis=rq2
+      - priority=2
+      - TZ=Asia/Kolkata
+      - kannelid=vedioconkannel
 
