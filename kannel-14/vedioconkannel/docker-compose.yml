@@ -1,0 +1,36 @@
+version: '3'
+services:
+  simulator1:
+    image: "winnovature/unitia:23apr2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=simulator
+      - TZ=Asia/Kolkata
+  kannel1:
+    image: "winnovature/kannel:sqldn"
+    ports:
+      - "15013:13013" # smsbox
+      - "15000:13000" # kannel admin
+    depends_on:
+      - kannelconfig
+    volumes:
+      - "/home/unitia/production/spool/vedioconkannel:/var/spool/kannel"
+      - "/logs/vedioconkannel:/var/log/kannel"
+      - "/etc/hosts:/etc/hosts"
+      - "/home/unitia/production/vedioconkannel:/etc/kannel"
+      - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
+    environment:
+      - "LANG=en_US.UTF-8"
+      - "LC_ALL=en_US.UTF-8"
+  kannelconfig:
+    image: "winnovature/unitia:23apr2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=kannelconfig
+      - TZ=Asia/Kolkata
