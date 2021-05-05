@@ -1,7 +1,8 @@
-version: '3'
+version: '2.4'
 services:
   http1:
     image: "winnovature/unitia:23apr2021_1" 
+    mem_limit: 6g 
     ports:
       - "8001:8080"
     volumes:
@@ -14,6 +15,7 @@ services:
       - TZ=Asia/Kolkata  
   http2:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 6g
     ports:
       - "8002:8080"
     volumes:

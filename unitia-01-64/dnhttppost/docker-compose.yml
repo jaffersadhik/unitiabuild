@@ -1,7 +1,8 @@
-version: '3'
+version: '2.4'
 services:
   dnhttppostinsert:
     image: "winnovature/unitia:31mar2021_1"
+    mem_limit: 2g
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -12,6 +13,7 @@ services:
       - TZ=Asia/Kolkata
   dnhttppostselect:
     image: "winnovature/unitia:31mar2021_1"
+    mem_limit: 2g
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia

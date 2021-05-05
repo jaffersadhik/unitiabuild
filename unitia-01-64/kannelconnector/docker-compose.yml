@@ -1,7 +1,8 @@
-version: '3'
+version: '2.4'
 services:
   kannelconnector1:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 2g
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts
@@ -14,6 +15,7 @@ services:
       - kannelid=kannel2
   kannelconnector2:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 2g
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts
@@ -26,6 +28,7 @@ services:
       - kannelid=kannel2
   kannelconnector3:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 2g
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts
@@ -38,6 +41,7 @@ services:
       - kannelid=vedioconkannel
   kannelconnector4:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 2g
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts

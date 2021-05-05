@@ -1,7 +1,8 @@
-version: '3'
+version: '2.4'
 services:
   smpp:
     image: "winnovature/unitia:20mar2021_1"
+    mem_limit: 2g
     ports:
       - "2775:8080"
     volumes:

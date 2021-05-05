@@ -1,12 +1,14 @@
 version: '2.4'
 services:
-  dnquerylog:
-    image: "winnovature/unitia:31mar2021_1"
+  dnsql:
+    image: "winnovature/unitia:23apr2021_1"
     mem_limit: 2g
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
       - /logs:/logs
     environment:
-      - module=dnquerylog
+      - module=dnsql
+      - kannelid=kannelA
       - TZ=Asia/Kolkata
+

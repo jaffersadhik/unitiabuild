@@ -1,7 +1,8 @@
-version: '3'
+version: '2.4'
 services:
   router1:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 2g
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts
@@ -13,6 +14,7 @@ services:
       - TZ=Asia/Kolkata
   router2:
     image: "winnovature/unitia:23apr2021_1"
+    mem_limit: 2g
     volumes:
       - /logs:/logs
       - /etc/hosts:/etc/hosts
