@@ -1,0 +1,22 @@
+version: '3'
+services:
+  reroutekannelinsert:
+    image: "winnovature/unitia:23apr2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=reroutekannelinsert
+      - redis=rq2      
+      - TZ=Asia/Kolkata
+  reroutekannelselect:
+    image: "winnovature/unitia:23apr2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=reroutekannelselect
+      - TZ=Asia/Kolkata
+

@@ -3,7 +3,7 @@ cd /home/build
 cd /home/build/router
 ./down.sh
 ./start.sh
-cd /home/build/kannelconnector
+cd /home/build/kannelconnector2
 ./down.sh
 ./start.sh
 cd /home/build/cdacconnector
@@ -61,6 +61,12 @@ cd /home/build/kannelB
 ./down.sh
 ./start.sh
 cd /home/build/aux
+./down.sh
+./start.sh
+cd /home/build/dbtoredis
+./down.sh
+./start.sh
+cd /home/build/reroutekannel
 ./down.sh
 ./start.sh
 
