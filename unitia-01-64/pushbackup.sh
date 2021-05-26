@@ -26,3 +26,4 @@ cp -rp kannelB /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp kannelAdb /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp kannelBdb /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp reroutekannel /home/jaffer/unitiabuild/unitia-01-64/.
+cp -rp concate /home/jaffer/unitiabuild/unitia-01-64/.

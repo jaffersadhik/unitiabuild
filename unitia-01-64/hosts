@@ -2,5 +2,5 @@
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 10.0.1.4 unitia.dn.ip unitia.dngen.ip
 10.0.2.33 unitia.mysql.ip
-10.0.2.64 kannel1db rq2 unitiadb redisqueue1 kannel1 dn
+10.0.2.64 kannel1db rq2 unitiadb redisqueue1 kannel1 dn kannelA kannelB tpsredis
 10.0.2.14 kannel2db kannel2
