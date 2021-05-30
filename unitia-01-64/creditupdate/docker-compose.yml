@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   creditupdate:
-    image: "winnovature/unitia:24jan2021"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
       - /logs:/logs

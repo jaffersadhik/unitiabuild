@@ -1,8 +1,10 @@
 version: '2.4'
 services:
   simulator1:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
+    ports:
+      - "5775:8080" # smsbox
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -27,7 +29,7 @@ services:
       - "LANG=en_US.UTF-8"
       - "LC_ALL=en_US.UTF-8"
   kannelconfig:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
       - /etc/hosts:/etc/hosts

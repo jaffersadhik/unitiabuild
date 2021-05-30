@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   kannelconnector1:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
       - /logs:/logs
@@ -12,9 +12,9 @@ services:
       - redis=rq2
       - priority=1 
       - TZ=Asia/Kolkata
-      - kannelid=kannel2
+      - kannelid=kannelA
   kannelconnector2:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
       - /logs:/logs
@@ -25,9 +25,9 @@ services:
       - redis=rq2
       - priority=2
       - TZ=Asia/Kolkata
-      - kannelid=kannel2
+      - kannelid=kannelA
   kannelconnector3:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
       - /logs:/logs
@@ -38,9 +38,9 @@ services:
       - redis=rq2
       - priority=1
       - TZ=Asia/Kolkata
-      - kannelid=vedioconkannel
+      - kannelid=kannelB
   kannelconnector4:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
       - /logs:/logs
@@ -51,5 +51,5 @@ services:
       - redis=rq2
       - priority=2
       - TZ=Asia/Kolkata
-      - kannelid=vedioconkannel
+      - kannelid=kannelB
 
