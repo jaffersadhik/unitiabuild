@@ -1,0 +1,43 @@
+This is ApacheBench, Version 2.3 <$Revision: 1430300 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking api.unitiapro.com (be patient)
+
+
+Server Software:        Jetty(9.4.30.v20200611)
+Server Hostname:        api.unitiapro.com
+Server Port:            80
+
+Document Path:          /send?username=vm1&password=password&to=919487660738&from=NXTDGT&content=Credit%20balance%20in%20your%20CAN%2022042239%20is%20Rs.%20127.79%20only.%20Top-up%20your%20CAN%20to%20avail%20online%20activation%20service%20without%20any%20barrier.%20INDIGITAL
+Document Length:        121 bytes
+
+Concurrency Level:      25
+Time taken for tests:   654.763 seconds
+Complete requests:      500000
+Failed requests:        0
+Write errors:           0
+Total transferred:      144500000 bytes
+HTML transferred:       60500000 bytes
+Requests per second:    763.63 [#/sec] (mean)
+Time per request:       32.738 [ms] (mean)
+Time per request:       1.310 [ms] (mean, across all concurrent requests)
+Transfer rate:          215.52 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    1   1.5      1    1002
+Processing:     2   31  37.3     17     728
+Waiting:        2   31  37.3     17     728
+Total:          3   33  37.4     18    1010
+
+Percentage of the requests served within a certain time (ms)
+  50%     18
+  66%     29
+  75%     40
+  80%     49
+  90%     78
+  95%    105
+  98%    140
+  99%    174
+ 100%   1010 (longest request)

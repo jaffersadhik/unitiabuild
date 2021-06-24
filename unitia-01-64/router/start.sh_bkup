@@ -1,0 +1,1 @@
+docker-compose up --scale router1=5 --scale router2=5 -d

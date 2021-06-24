@@ -24,3 +24,28 @@ services:
       - redis=rq2
       - priority=2
       - TZ=Asia/Kolkata
+  router3:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=router
+      - redis=rq3
+      - priority=1
+      - TZ=Asia/Kolkata
+  router4:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=router
+      - redis=rq3
+      - priority=2
+      - TZ=Asia/Kolkata
+

@@ -1,0 +1,1 @@
+docker-compose up --scale kannelconnector1=2 --scale kannelconnector2=2 --scale kannelconnector3=2 --scale kannelconnector4=2 --scale kannelconnetor5=2 --scale kannelconnector6=2 --scale kannelconnector7=2 --scale kannelconnector8=2 -d

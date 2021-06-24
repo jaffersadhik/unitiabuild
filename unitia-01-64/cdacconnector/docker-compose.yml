@@ -12,3 +12,15 @@ services:
       - redis=rq2
       - TZ=Asia/Kolkata
       - kannelid=cdac
+  cdacconnector1:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=cdacconnector
+      - redis=rq3
+      - TZ=Asia/Kolkata
+      - kannelid=cdac
