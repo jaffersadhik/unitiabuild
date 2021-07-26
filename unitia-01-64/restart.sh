@@ -1,5 +1,3 @@
-cd /home/build
-./httprestart.sh
 cd /home/build/router
 ./down.sh
 ./start.sh
@@ -30,9 +28,6 @@ cd /home/build/dnhttppost
 cd /home/build/dnpostdb
 ./down.sh
 ./start.sh
-cd /home/build/scheduledb
-./down.sh
-./start.sh
 cd /home/build/tablereader
 ./down.sh
 ./start.sh
@@ -40,12 +35,6 @@ cd /home/build/queuecheck
 ./down.sh
 ./start.sh
 cd /home/build/creditupdate
-./down.sh
-./start.sh
-cd /home/build/smpp1
-./down.sh
-./start.sh
-cd /home/build/smpp2
 ./down.sh
 ./start.sh
 cd /home/build/dnsqlA

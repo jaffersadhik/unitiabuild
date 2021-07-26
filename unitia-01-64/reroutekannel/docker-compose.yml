@@ -10,16 +10,6 @@ services:
       - module=reroutekannelinsert
       - redis=rq2      
       - TZ=Asia/Kolkata
-  reroutekannelinsert1:
-    image: "winnovature/unitia:29may2021_1"
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=reroutekannelinsert
-      - redis=rq3
-      - TZ=Asia/Kolkata
   reroutekannelselect:
     image: "winnovature/unitia:29may2021_1"
     volumes:
@@ -28,5 +18,26 @@ services:
       - /logs:/logs
     environment:
       - module=reroutekannelselect
+      - dbname=qdb1 
+      - TZ=Asia/Kolkata
+  reroutekannelselect2:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=reroutekannelselect
+      - dbname=qdb2
+      - TZ=Asia/Kolkata
+  reroutekannelselect3:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=reroutekannelselect
+      - dbname=qdb3
       - TZ=Asia/Kolkata
 

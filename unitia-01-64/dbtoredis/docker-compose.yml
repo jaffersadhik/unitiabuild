@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  dbtoredis:
+  dbtoredis1:
     image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
     volumes:
@@ -9,4 +9,787 @@ services:
       - /logs:/logs
     environment:
       - module=dbtoredis
+      - dbname=qdb1
+      - tablename=optin
       - TZ=Asia/Kolkata
+  dbtoredis2:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=optin
+      - TZ=Asia/Kolkata
+  dbtoredis3:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=optin
+      - TZ=Asia/Kolkata
+  dbtoredis4:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=optout
+      - TZ=Asia/Kolkata
+  dbtoredis5:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=optout
+      - TZ=Asia/Kolkata
+  dbtoredis6:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=optout
+      - TZ=Asia/Kolkata
+  dbtoredis7:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=duplicate
+      - TZ=Asia/Kolkata
+  dbtoredis8:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=duplicate
+      - TZ=Asia/Kolkata
+  dbtoredis9:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=duplicate
+      - TZ=Asia/Kolkata
+  dbtoredis10:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=dnreceiverpool
+      - TZ=Asia/Kolkata
+  dbtoredis11:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=dnreceiverpool
+      - TZ=Asia/Kolkata
+  dbtoredis12:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=dnreceiverpool
+      - TZ=Asia/Kolkata
+  dbtoredis13:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=dnpostpool
+      - TZ=Asia/Kolkata
+  dbtoredis14:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=dnpostpool
+      - TZ=Asia/Kolkata
+  dbtoredis15:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=dnpostpool
+      - TZ=Asia/Kolkata
+  dbtoredis16:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=schedulepool
+      - TZ=Asia/Kolkata
+  dbtoredis17:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=schedulepool
+      - TZ=Asia/Kolkata
+  dbtoredis18:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=schedulepool
+      - TZ=Asia/Kolkata
+  dbtoredis19:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=commonpool_1
+      - TZ=Asia/Kolkata
+  dbtoredis20:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=commonpool_1
+      - TZ=Asia/Kolkata
+  dbtoredis21:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=commonpool_1
+      - TZ=Asia/Kolkata
+  dbtoredis22:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=cdac
+      - TZ=Asia/Kolkata
+  dbtoredis23:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=cdac
+      - TZ=Asia/Kolkata
+  dbtoredis24:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=cdac
+      - TZ=Asia/Kolkata
+  dbtoredis25:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=otppool
+      - TZ=Asia/Kolkata
+  dbtoredis26:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=otppool
+      - TZ=Asia/Kolkata
+  dbtoredis27:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=otppool
+      - TZ=Asia/Kolkata
+  dbtoredis28:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=otppool
+      - TZ=Asia/Kolkata
+  dbtoredis29:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=otppool
+      - TZ=Asia/Kolkata
+  dbtoredis30:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=otppool
+      - TZ=Asia/Kolkata
+  dbtoredis31:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=otpretrypool
+      - TZ=Asia/Kolkata
+  dbtoredis32:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=otpretrypool
+      - TZ=Asia/Kolkata
+  dbtoredis33:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=otpretrypool
+      - TZ=Asia/Kolkata
+  dbtoredis34:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=dnretrypool
+      - TZ=Asia/Kolkata
+  dbtoredis35:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=dnretrypool
+      - TZ=Asia/Kolkata
+  dbtoredis36:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=dnretrypool
+      - TZ=Asia/Kolkata
+  dbtoredis37:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=smppdn
+      - TZ=Asia/Kolkata
+  dbtoredis38:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=smppdn
+      - TZ=Asia/Kolkata
+  dbtoredis39:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=smppdn
+      - TZ=Asia/Kolkata
+  dbtoredis40:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=submissionpool
+      - TZ=Asia/Kolkata
+  dbtoredis41:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=submissionpool
+      - TZ=Asia/Kolkata
+  dbtoredis42:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=submissionpool
+      - TZ=Asia/Kolkata
+  dbtoredis43:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=requestlog
+      - TZ=Asia/Kolkata
+  dbtoredis44:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=requestlog
+      - TZ=Asia/Kolkata
+  dbtoredis45:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=requestlog
+      - TZ=Asia/Kolkata
+  dbtoredis46:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=missedcallpool
+      - TZ=Asia/Kolkata
+  dbtoredis47:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=missedcallpool
+      - TZ=Asia/Kolkata
+  dbtoredis48:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=missedcallpool
+      - TZ=Asia/Kolkata
+  dbtoredis49:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=shortcodepool
+      - TZ=Asia/Kolkata
+  dbtoredis50:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=shortcodepool
+      - TZ=Asia/Kolkata
+  dbtoredis51:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=shortcodepool
+      - TZ=Asia/Kolkata
+  dbtoredis52:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=kl_kannelA_1
+      - TZ=Asia/Kolkata
+  dbtoredis53:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=kl_kannelA_1
+      - TZ=Asia/Kolkata
+  dbtoredis54:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=kl_kannelA_1
+      - TZ=Asia/Kolkata
+  dbtoredis55:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=kl_kannelB_1
+      - TZ=Asia/Kolkata
+  dbtoredis56:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=kl_kannelB_1
+      - TZ=Asia/Kolkata
+  dbtoredis57:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=kl_kannelB_1
+      - TZ=Asia/Kolkata
+  dbtoredis58:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=kl_kannelC_1
+      - TZ=Asia/Kolkata
+  dbtoredis59:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=kl_kannelC_1
+      - TZ=Asia/Kolkata
+  dbtoredis60:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=kl_kannelC_1
+      - TZ=Asia/Kolkata
+  dbtoredis61:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=kl_kannelD_1
+      - TZ=Asia/Kolkata
+  dbtoredis62:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=kl_kannelD_1
+      - TZ=Asia/Kolkata
+  dbtoredis63:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=kl_kannelD_1
+      - TZ=Asia/Kolkata
+  dbtoredis64:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb1
+      - tablename=kl_kannelE_1
+      - TZ=Asia/Kolkata
+  dbtoredis65:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb2
+      - tablename=kl_kannelE_1
+      - TZ=Asia/Kolkata
+  dbtoredis66:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dbtoredis
+      - dbname=qdb3
+      - tablename=kl_kannelE_1
+      - TZ=Asia/Kolkata
+

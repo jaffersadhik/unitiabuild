@@ -1,5 +1,3 @@
-cd /home/build
-./httprestart.sh
 cd /home/build/router
 ./down.sh
 cd /home/build/kannelconnector2
@@ -27,10 +25,6 @@ cd /home/build/tablereader
 cd /home/build/queuecheck
 ./down.sh
 cd /home/build/creditupdate
-./down.sh
-cd /home/build/smpp1
-./down.sh
-cd /home/build/smpp2
 ./down.sh
 cd /home/build/dnsqlA
 ./down.sh

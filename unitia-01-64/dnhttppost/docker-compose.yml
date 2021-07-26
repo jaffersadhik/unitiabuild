@@ -11,17 +11,6 @@ services:
       - module=dnhttppostinsert
       - redis=rq2      
       - TZ=Asia/Kolkata
-  dnhttppostinsert1:
-    image: "winnovature/unitia:29may2021_1"
-    mem_limit: 2g
-    volumes:
-      - /etc/hosts:/etc/hosts
-      - /home/unitia/:/unitia
-      - /logs:/logs
-    environment:
-      - module=dnhttppostinsert
-      - redis=rq3
-      - TZ=Asia/Kolkata
   dnhttppostselect:
     image: "winnovature/unitia:29may2021_1"
     mem_limit: 2g
@@ -31,5 +20,28 @@ services:
       - /logs:/logs
     environment:
       - module=dnhttppostselect
+      - dbname=qdb1
+      - TZ=Asia/Kolkata
+  dnhttppostselect2:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnhttppostselect
+      - dbname=qdb2
+      - TZ=Asia/Kolkata
+  dnhttppostselect3:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnhttppostselect
+      - dbname=qdb3
       - TZ=Asia/Kolkata
 
