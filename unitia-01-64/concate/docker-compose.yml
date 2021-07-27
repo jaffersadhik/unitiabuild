@@ -1,7 +1,7 @@
 version: '3'
 services:
   concateinsert:
-    image: "winnovature/unitia:31mar2021_1"
+    image: "winnovature/unitia:29may2021_1"
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -9,4 +9,64 @@ services:
     environment:
       - module=concateinsert
       - redis=rq2      
+      - TZ=Asia/Kolkata
+  concateexpiry:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=concateexpiry
+      - dbname=qdb1
+      - TZ=Asia/Kolkata
+  concateexpiry2:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=concateexpiry
+      - dbname=qdb2
+      - TZ=Asia/Kolkata
+  concateexpiry3:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=concateexpiry
+      - dbname=qdb3
+      - TZ=Asia/Kolkata
+  concateselect:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=concateselect
+      - dbname=qdb1
+      - TZ=Asia/Kolkata
+  concateselect2:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=concateselect
+      - dbname=qdb2
+      - TZ=Asia/Kolkata
+  concateselect3:
+    image: "winnovature/unitia:29may2021_1"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=concateselect
+      - dbname=qdb3    
       - TZ=Asia/Kolkata
