@@ -30,3 +30,76 @@ services:
     environment:
       - module=duplicate
       - TZ=Asia/Kolkata
+  otp:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=otp
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+  otpretry:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=otpretry
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+  dnretry:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=dnretry
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+  shortcode:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=shortcode
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+  missedcall:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=missedcall
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+  dnexpiry:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /logs:/logs
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+    environment:
+      - module=dnexpiry
+      - redis=rq2
+      - priority=1
+      - TZ=Asia/Kolkata
+

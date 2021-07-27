@@ -21,11 +21,8 @@ cp -rp scheduledb /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp pushbackup.sh /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp restart.sh /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp stop.sh /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp dnsqlA /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp dnsqlB /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp kannelA /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp kannelB /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp kannelAdb /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp kannelBdb /home/jaffer/unitiabuild/unitia-01-64/.
+cp -rp dnsql /home/jaffer/unitiabuild/unitia-01-64/.
+cp -rp kanneldb /home/jaffer/unitiabuild/unitia-01-64/.
+cp -rp queuedb /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp reroutekannel /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp concate /home/jaffer/unitiabuild/unitia-01-64/.

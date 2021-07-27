@@ -1,0 +1,58 @@
+version: '2.4'
+services:
+  dnsqla:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnsql
+      - kannelid=kannelA
+      - TZ=Asia/Kolkata
+  dnsqlb:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnsql
+      - kannelid=kannelB
+      - TZ=Asia/Kolkata
+  dnsqlc:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnsql
+      - kannelid=kannelC
+      - TZ=Asia/Kolkata
+  dnsqld:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnsql
+      - kannelid=kannelD
+      - TZ=Asia/Kolkata
+  dnsqle:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=dnsql
+      - kannelid=kannelE
+      - TZ=Asia/Kolkata
+

@@ -37,16 +37,7 @@ cd /home/build/queuecheck
 cd /home/build/creditupdate
 ./down.sh
 ./start.sh
-cd /home/build/dnsqlA
-./down.sh
-./start.sh
-cd /home/build/dnsqlB
-./down.sh
-./start.sh
-cd /home/build/kannelA
-./down.sh
-./start.sh
-cd /home/build/kannelB
+cd /home/build/dnsql
 ./down.sh
 ./start.sh
 cd /home/build/aux
