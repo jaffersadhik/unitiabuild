@@ -1,7 +1,10 @@
-version: '3'
+version: '2.4'
 services:
   simulator1:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
+    ports:
+      - "7776:8080" # smsbox
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
@@ -9,24 +12,90 @@ services:
     environment:
       - module=simulator
       - TZ=Asia/Kolkata
-  kannel1:
-    image: "winnovature/kannel:sqldn"
+  kannela:
+    image: "product2/kannel:sqldn"
+    ports:
+      - "20013:13013" # smsbox
+      - "20000:13000" # kannel admin
+    depends_on:
+      - kannelconfig
+    volumes:
+      - "/home/unitia/production/spool/kannelD:/var/spool/kannel"
+      - "/logs/kannelA:/var/log/kannel"
+      - "/etc/hosts:/etc/hosts"
+      - "/home/unitia/production/kannelA:/etc/kannel"
+      - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
+    environment:
+      - "LANG=en_US.UTF-8"
+      - "LC_ALL=en_US.UTF-8"
+  kannelb:
+    image: "product2/kannel:sqldn"
     ports:
       - "14013:13013" # smsbox
       - "14000:13000" # kannel admin
     depends_on:
       - kannelconfig
     volumes:
-      - "/home/unitia/production/spool/kannel2:/var/spool/kannel"
-      - "/logs/kannel2:/var/log/kannel"
+      - "/home/unitia/production/spool/kannelD:/var/spool/kannel"
+      - "/logs/kannelB:/var/log/kannel"
       - "/etc/hosts:/etc/hosts"
-      - "/home/unitia/production/kannel2:/etc/kannel"
+      - "/home/unitia/production/kannelB:/etc/kannel"
       - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
     environment:
       - "LANG=en_US.UTF-8"
       - "LC_ALL=en_US.UTF-8"
+  kannelc:
+    image: "product2/kannel:sqldn"
+    ports:
+      - "17013:13013" # smsbox
+      - "17000:13000" # kannel admin
+    depends_on:
+      - kannelconfig
+    volumes:
+      - "/home/unitia/production/spool/kannelD:/var/spool/kannel"
+      - "/logs/kannelC:/var/log/kannel"
+      - "/etc/hosts:/etc/hosts"
+      - "/home/unitia/production/kannelC:/etc/kannel"
+      - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
+    environment:
+      - "LANG=en_US.UTF-8"
+      - "LC_ALL=en_US.UTF-8"
+  kanneld:
+    image: "product2/kannel:sqldn"
+    ports:
+      - "15013:13013" # smsbox
+      - "15000:13000" # kannel admin
+    depends_on:
+      - kannelconfig
+    volumes:
+      - "/home/unitia/production/spool/kannelD:/var/spool/kannel"
+      - "/logs/kannelD:/var/log/kannel"
+      - "/etc/hosts:/etc/hosts"
+      - "/home/unitia/production/kannelD:/etc/kannel"
+      - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
+    environment:
+      - "LANG=en_US.UTF-8"
+      - "LC_ALL=en_US.UTF-8"
+  kannele:
+    image: "product2/kannel:sqldn"
+    ports:
+      - "16013:13013" # smsbox
+      - "16000:13000" # kannel admin
+    depends_on:
+      - kannelconfig
+    volumes:
+      - "/home/unitia/production/spool/kannelD:/var/spool/kannel"
+      - "/logs/kannelE:/var/log/kannel"
+      - "/etc/hosts:/etc/hosts"
+      - "/home/unitia/production/kannelE:/etc/kannel"
+      - "./opensmppbox.conf:/etc/kannel/opensmppbox.conf"
+    environment:
+      - "LANG=en_US.UTF-8"
+      - "LC_ALL=en_US.UTF-8"
+
   kannelconfig:
-    image: "winnovature/unitia:23apr2021_1"
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 2g
     volumes:
       - /etc/hosts:/etc/hosts
       - /home/unitia/:/unitia
