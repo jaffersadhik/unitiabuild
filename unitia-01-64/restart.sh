@@ -1,3 +1,6 @@
+cd /home/build/concate
+./down.sh
+./start.sh
 cd /home/build/router
 ./down.sh
 ./start.sh

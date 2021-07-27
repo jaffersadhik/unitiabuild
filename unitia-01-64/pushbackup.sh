@@ -1,6 +1,3 @@
-cp -rp http* /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp smpp1 /home/jaffer/unitiabuild/unitia-01-64/.
-cp -rp smpp2 /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp creditupdate /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp dn /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp kannelconnector2 /home/jaffer/unitiabuild/unitia-01-64/.
@@ -26,3 +23,4 @@ cp -rp kanneldb /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp queuedb /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp reroutekannel /home/jaffer/unitiabuild/unitia-01-64/.
 cp -rp concate /home/jaffer/unitiabuild/unitia-01-64/.
+cp -rp tpsredis /home/jaffer/unitiabuild/unitia-01-64/.
