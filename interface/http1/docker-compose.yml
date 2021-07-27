@@ -1,0 +1,28 @@
+version: '2.4'
+services:
+  http1:
+    image: "winnovature/unitia:29may2021_1" 
+    mem_limit: 6g 
+    ports:
+      - "8001:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs 
+    environment:
+      - module=http
+      - port=8001
+      - TZ=Asia/Kolkata  
+  http2:
+    image: "winnovature/unitia:29may2021_1"
+    mem_limit: 6g
+    ports:
+      - "8002:8080"
+    volumes:
+      - /etc/hosts:/etc/hosts
+      - /home/unitia/:/unitia
+      - /logs:/logs
+    environment:
+      - module=http
+      - port=8002
+      - TZ=Asia/Kolkata
